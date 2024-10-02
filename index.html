@@ -1,0 +1,26 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Glowing Border with Current Time</title>
+</head>
+<body>
+    <div class="block glow">
+        <div class="time-container">
+            <span id="current-time"></span>
+        </div>
+    </div>
+
+    <script>
+        function updateTime() {
+            const timeElement = document.getElementById('current-time');
+            const currentTime = new Date().toLocaleTimeString();
+            timeElement.textContent = currentTime;
+        }
+        setInterval(updateTime, 1000); // Update time every second
+        updateTime(); // Initial call to set the time immediately
+    </script>
+</body>
+</html>
